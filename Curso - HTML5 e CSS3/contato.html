@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Contato - Barbearia Alura</title>
+        <link rel="stylesheet" href="reset.css"> <!--Coloca-se o reset.css antes do nosso CSS, para que ele não delete as nossas configurações de CSS feitas por nós-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="caixa">
+                <h1><img src="logo.png" alt="Logo da Barbearia Alura"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <form>
+                <label for="nomesobrenome">Nome e sobrenome</label>
+                <input type="text" id="nomesobrenome" class="input-padrao" required> <!--Abri uma caixa de texto para o usuário-->
+
+                <label for="email">Email</label>
+                <input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com"> <!--Input do tipo email, altera o teclado mobile-->
+
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX"> <!--Input do tipo tel, altera o teclado mobile para numérico-->
+                <!--Alguns tipos de inputs para celular: email, tel, number, password, date, datetime, month e search-->
+
+                <label for="mensagem">Mensagem</label>
+                <textarea name="texto para empresa" id="mensagem" cols="70" rows="10" class="input-padrao" required></textarea>
+                
+                <fieldset> <!--Tag para formulário-->
+                    <legend>Como prefere o nosso contato?</legend>
+                    <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">Email</label>
+                    
+                    <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>
+                    
+                    <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label> <!--checked serve para deixar esta alternativa marcada-->
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>Qual horário prefere ser atendido?</legend>
+                    <select name="" id="">
+                        <option value="">Manhã</option>
+                        <option value="">Tarde</option>
+                        <option value="">Noite</option>
+                    </select>
+                </fieldset>
+
+                <label class="checkbox"><input type="checkbox" checked> Gostaria de receber nossa novidades por email?</label>
+
+                <input type="submit" value="Enviar formulário" class="enviar">
+            </form>
+
+            <table>
+                <thead>
+                    <tr> <!--Linha da tabela-->
+                        <th>Dia</th>
+                        <th>Horário</th> <!--Células da tabela-->
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr> <!--Linha da tabela-->
+                        <td>Segunda</td>
+                        <td>8h ~ 20</td> <!--Células da tabela-->
+                    </tr>
+                    <tr> <!--Linha da tabela-->
+                        <td>Quarta</td>
+                        <td>8h ~ 20</td> <!--Células da tabela-->
+                    </tr>
+                    <tr> <!--Linha da tabela-->
+                        <td>Sexta</td>
+                        <td>8h ~ 20</td> <!--Células da tabela-->
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+        <footer>
+            <img src="logo-branco.png" alt="Logo da Barbearia Alura">
+            <p class="copyright">&copy; Copyright Barbearia Alura 2019</p>
+        </footer>
+        
+    </body>
+</html>

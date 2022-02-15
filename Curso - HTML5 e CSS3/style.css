@@ -1,0 +1,277 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caixa {
+    position: relative;
+    width: 940px;
+    margin: 0 auto; /* 0 para cima e para baixo / automático para os lados*/
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px; /*1 = topo; 2 = direita; 3 = baixo; 4 = esquerda*/
+}
+
+nav a {
+    text-transform: uppercase; /*Letra maiúscula para CSS*/
+    color: #000000;
+    font-weight: bold; /*Negrito para CSS*/
+    font-size: 22px;
+    text-decoration: none; /*Retira o underline do link*/
+}
+
+nav a:hover { /*Mudança de cor quando o mouse passa por cima do link*/
+    color: #C78C19;
+    text-decoration: underline;
+}
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0; /*Espaçamento interno*/
+}
+
+.produtos li{
+    display: inline-block; /*Para que os produtos ocupam só o tamanho deles na página*/
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box; /*Faz com que os pixels do padding entre nos 30% definidos do width*/
+    border: 2px solid #000000; /*Outros estilos de borda: dashed, dotted*/
+    border-radius: 10px; /*Raio do círculo para arredondar borda*/
+}
+
+.produtos li:hover { /*Comportamento quando o mouse passa por cima*/
+    border-color: #C78C19;
+}
+
+.produtos li:active { /*Comportamento quando o mouse é clicado*/
+    border-color: #088C19;
+}
+
+.produtos li:hover h2 {
+    font-size: 34px;
+}
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao {
+    font-size: 18px;
+}
+
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    background: url(bg.jpg); /*Imagem de fundo do rodapé*/
+    padding: 40px;
+}
+
+.copyright {
+    font-size: 13px;
+    color: #FFFFFF;
+    margin-top: 20px;
+}
+
+main {
+    
+}
+
+form {
+    margin: 40px 0;
+}
+
+form label, form legend {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padrao {
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox {
+    margin: 20px 0;
+}
+
+.enviar {
+    width: 40%;
+    padding: 15px 0;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all; /*Transição de 1 segundo para cor de fundo e do tamanho do input enviar*/
+    cursor: pointer; /*Transforma cursor em mãozinha, mostrando que é clicável*/
+}
+
+.enviar:hover {
+    background: darkorange;
+    transform: scale(1.2) rotate(70deg); /*Aumenta tudo do input enviar em 20%*/
+}
+
+table {
+    margin: 20px 40px;
+}
+
+thead {
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+/* -------------------- CSS da página inicial -------------------- */
+
+.banner {
+    width: 100%;
+}
+
+.titulo-principal { /*A fonte do titulo principal sempre irá ser o dobro*/
+    text-align: center;
+    font-size: 2em; /*Duas vezes o tamanho base da fonte (2 x 15px = 30px)*/
+    margin: 0 0 1em;
+    clear: left;
+    text-shadow: 2px 2px #FF0000;
+}
+
+.principal {
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.principal p {
+    margin: 0 0 1em; /*Margem entre os parágrafos*/
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em { 
+    font-style: italic;
+}
+
+.utensilios {
+    width: 120px;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.mapa {
+    padding: 3em 0;
+    background: linear-gradient(#FEFEFE, #888888);
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.mapa p {
+    text-align: center;
+    margin: 0 0 2em;
+}
+
+.beneficios {
+    padding: 3em 0;
+    background: #888888;
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itens {
+    line-height: 1.5;
+}
+
+.itens:first-child { /*Primeiro item da lista fica em negrito*/
+    font-weight: bold;
+}
+
+.itens::before {
+    content: "⚝";
+}
+
+.imagem-beneficios {
+    width: 60%;
+    opacity: 1;
+    transition: 400ms all;
+    box-shadow: 10px 10px 10px 0 #000000/*eixo X, eixo Y, blur, intensidade, color (colocando uma "," podemos adicionar mais sombras*/
+}
+
+.imagem-beneficios:hover {
+    opacity: 0.3;
+}
+
+.video {
+    width: 560px;
+    margin: 1em auto;
+}
+
+@media screen and (max-width: 480px) { /*Para todos os dispositivos que tanham até 480px de largura*/
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video, .produtos {
+        width: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .produtos li {
+        display: block;
+        width: auto;
+        margin: 10% 0;
+    }
+    
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+    }
+}
+
+

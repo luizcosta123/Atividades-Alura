@@ -1,0 +1,134 @@
+.cabecalhoPrincipal .container {
+    display: flex;
+    align-items: center; /*Alinha os itens verticalmente*/
+    justify-content: space-between; /*Coloca o espaço vazio entre os itens*/
+}
+
+.cabecalhoPrincipal-nav {
+    display: flex;
+}
+
+.rodapePrincipal-patrocinadores .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /*Distribui toda espaço em volta dos elementos*/
+    width: 70%;
+    margin-right: 5%;
+}
+
+.rodapePrincipal-contatoForm {
+    width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+    display: flex; /*O display flex também deixam os filhos da mesma altura*/
+}
+
+.rodapePrincipal-navMap-list{
+    display: flex;
+    /* flex-direction: column; => Divide na vertical
+    flex-wrap: wrap; => Quebra para próxima coluna */
+    flex-flow: column wrap;
+    height: 255px;
+}
+
+.conteudoPrincipal-cursos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conteudoPrincipal-cursos-link {
+    width: 23%; /*Espaço que o link ocupa*/
+    margin: 1%;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n) { /*Se aplica aos múltiplos de 4*/
+    margin-right: 0;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n+1) { /*Se aplica aos múltiplos de 4 + 1*/
+    margin-left: 0;
+}
+
+.videoSobre .container {
+    display: flex;
+}
+
+.videoSobre-sobre {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2; /*Aumenta o item até completar a área restante*/
+    text-align: center;
+}
+
+.videoSobre-sobre-list {
+    flex-grow: 1;
+}
+
+.videoSobre-video {
+    flex-grow: 1;
+    flex-shrink: 2;
+}
+
+/* Mobile */
+
+@media(max-width: 768px) { 
+
+    .cabecalhoPrincipal-nav {
+        flex-direction: column;
+    }
+
+    .cabecalhoPrincipal .container {
+        flex-direction: column;
+        align-items: initial;
+        text-align: center;
+    }
+
+    .conteudoPrincipal-cursos {
+        flex-direction: column;
+    }
+
+    .conteudoPrincipal-cursos-link {
+        width: 100%;
+    }
+
+    .rodapePrincipal-navMap-list {
+        height: auto;
+    }
+
+    .rodapePrincipal-patrocinadores .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rodapePrincipal-patrocinadores-list {
+        margin: 0;
+        width: 100%;
+    }
+
+    .rodapePrincipal-contatoForm {
+        width: 100%;
+    }
+
+    .rodapePrincipal-contatoForm-fieldset {
+        justify-content: center;
+    }
+
+    .cabecalhoPrincipal-nav-link-app {
+        order: -1; /*Coloca ele como primeiro na ordem*/
+    }
+
+    .videoSobre .container {
+        flex-direction: column;
+    }
+
+    .videoSobre-video {
+        margin: 0 auto;
+    }
+
+}

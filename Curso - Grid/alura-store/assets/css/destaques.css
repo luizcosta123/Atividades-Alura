@@ -1,0 +1,105 @@
+
+
+.destaques { /*Criação do Grid*/
+    display: grid;
+    grid-gap: 0.2rem;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    height: calc(100vh - 50px);
+}
+
+.caixa {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.destaques__titulo {
+    width: 100%;
+    padding: 0.6rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fdfdfd;
+}
+
+.destaques__principal {
+    background: url('../img/fortnite.jpg') center / cover no-repeat;
+
+    grid-row: 1 / 3;
+
+    /* grid-column: 1 / 4; => Foi retirado, pois será definido nas media@ (responsivo.css)*/
+    
+    /* Outra maneira: 
+    background-image: url('../img/fortnite.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3; */
+}
+
+.destaques__secundario:nth-child(2) {
+    background: url('../img/pubg.jpg') center / cover no-repeat;
+
+    /* grid-column: 4 / 4; => Foi retirado, pois será definido nas media@ (responsivo.css)
+    grid-row: 1 / 1; */
+
+    /* Outra maneira: 
+    background-image: url('../img/pubg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1; */
+}
+
+.destaques__secundario:nth-child(3) {
+    background: url('../img/slack.png') center / cover no-repeat;
+
+    /* grid-column: 4 / 4; => Foi retirado, pois será definido nas media@ (responsivo.css)
+    grid-row: 2 / 2; */
+}
+
+.destaques__secundario:nth-child(4) {
+    background: url('../img/whatsapp.png') center / cover no-repeat;
+
+    /* grid-column: 4 / 4;  => Foi retirado, pois será definido nas media@ (responsivo.css)
+    grid-row: 3 / 3; */
+}
+
+.destaques__secundario:nth-child(5) {
+    background: url('../img/cs-go.jpg') center / cover no-repeat;
+
+    /* grid-column: 3 / 3; => Foi retirado, pois será definido nas media@ (responsivo.css)
+    grid-row: 3 / 3; */
+}
+
+.destaques__categorias {
+    grid-column: 1 / 3;
+    grid-row: 3 / 3;
+}
+
+.destaques__categorias___lista {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.destaques__categorias___item {
+    display: flex;
+    align-items: center;
+    border-left: 5px solid transparent;
+    background: #fdfdfd;
+    color: #333333;
+    padding: 1rem;
+    width: 50%;
+}
+
+.destaques__categorias___link {
+    color: inherit; /*Herda cor do pai*/
+}
