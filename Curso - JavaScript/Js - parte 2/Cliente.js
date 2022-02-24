@@ -6,7 +6,7 @@ export class Cliente {
 
     nome; // Atributo Público
     _cpf; // Atributo Privado
-    _rg; // Atributo Público
+    _rg; // Atributo Privado
 
     /*Get e Set*/
     
